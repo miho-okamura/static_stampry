@@ -1,0 +1,75 @@
+// 横幅
+$pc: 1024px; // PC
+$tb: 768px; // PC
+$sp: 540px; // スマホ
+$sp320: 320px; // iPhone5
+
+@mixin queryPc {
+  @media screen and (min-width: ($pc + 1px)) {
+    @content;
+  }
+}
+@mixin queryPc-ol {
+  @media screen and (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin queryTb-om {
+  @media screen and (min-width: ($tb + 1px)) {
+    @content;
+  }
+
+}
+@mixin queryTb-Only {
+  @media screen and (max-width: ($tb)) and (min-width: ($sp + 1px)) {
+    @content;
+  }
+}
+@mixin queryTb {
+  @media screen and (max-width: ($tb)) {
+    @content;
+  }
+}
+@mixin querySp-om {
+  @media screen and (min-width: ($sp + 1px)) {
+    @content;
+  }
+}
+@mixin querySp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}
+@mixin querySp320 {
+  @media screen and (max-width: ($sp320)) {
+    @content;
+  }
+}
+
+:root {
+  @include queryPc {
+    //margin: 0;
+    /*Breakpoint PC*/
+  }
+  @include queryPc-ol {
+    /*Breakpoint PC or less*/
+  }
+  @include queryTb-om {
+    /*Breakpoint TB or more*/
+  }
+  @include queryTb {
+    /*Breakpoint Tb*/
+  }
+  @include queryTb-Only {
+    /*Breakpoint Tb-only*/
+  }
+  @include querySp-om {
+    /*Breakpoint Sp or more*/
+  }
+  @include querySp {
+    /*Breakpoint Sp*/
+  }
+  @include querySp320 {
+    /*Breakpoint Sp 320px */
+  }
+}

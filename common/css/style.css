@@ -1,0 +1,117 @@
+/*------
+   font
+  ------*/
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', HiraginoCustom, 'Hiragino Kaku Gothic ProN', "Noto Sans JP", YuGothic, 'Yu Gothic Medium', Meiryo, sans-serif;
+}
+
+@media (max-width: 767px) {
+  .pc-on {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .sp-on {
+    display: none;
+  }
+}
+
+.ichioshi {
+  margin-bottom: 0;
+}
+
+.ichioshi__grid {
+  height: 432px;
+  display: -ms-grid;
+  display: grid;
+  gap: 0 32px;
+  grid-template: "ichioshi-1 ichioshi-2 ichioshi-3" auto "ichioshi-1 ichioshi-4 ichioshi-5" auto/ 532px 1fr 1fr;
+}
+
+.ichioshi__grid-first {
+  grid-area: ichioshi-1;
+}
+
+.ichioshi__grid-ttl {
+  height: 32px;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ichioshi__grid li a {
+  display: block;
+}
+
+.ichioshi__grid li img {
+  width: 100%;
+  display: block;
+}
+
+.ichioshi__grid li:nth-child(2) {
+  grid-area: ichioshi-2;
+}
+
+.ichioshi__grid li:nth-child(3) {
+  grid-area: ichioshi-3;
+}
+
+.ichioshi__grid li:nth-child(4) {
+  grid-area: ichioshi-4;
+}
+
+.ichioshi__grid li:nth-child(5) {
+  grid-area: ichioshi-5;
+}
+
+.aaaa-list {
+  position: relative;
+  z-index: 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 240px 240px;
+      grid-template-columns: 240px 240px;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  grid-auto-flow: column;
+  gap: 16px 0;
+  grid-template: "spot-01 spot-04" 1fr "spot-02 spot-05" 1fr "spot-03 spot-06" 1fr / 240px 240px;
+}
+
+.aaaa-list li:nth-child(1) {
+  grid-area: spot-01;
+}
+
+.aaaa-list li:nth-child(2) {
+  grid-area: spot-02;
+}
+
+.aaaa-list li:nth-child(3) {
+  grid-area: spot-03;
+}
+
+.aaaa-list li:nth-child(4) {
+  grid-area: spot-04;
+}
+
+.aaaa-list li:nth-child(5) {
+  grid-area: spot-05;
+}
+
+.aaaa-list li:nth-child(6) {
+  grid-area: spot-06;
+}
+/*# sourceMappingURL=style.css.map */
