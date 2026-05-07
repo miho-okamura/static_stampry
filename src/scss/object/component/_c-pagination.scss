@@ -1,0 +1,116 @@
+@use "../../Foundation/import" as var;
+
+@mixin pagination-item {
+  font-size: var.fs(14, 18);
+  padding: 8px;
+
+  color: var(--color-gray);
+
+  transition: var.$anime-time var.$easeOutCubic;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 48px;
+  width: 48px;
+}
+
+@mixin pagination-item-active {
+  color: var(--color-category-main);
+  box-shadow: none;
+
+  // border-bottom: 4px solid;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    // background-color: var(--color-category-main);
+    background-color: currentColor;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.c-pagination {
+  margin-top: 80px;
+
+  @include var.mq(max, sp) {
+    margin-top: 40px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    @include var.mq(max, sp) {
+      gap: 4px;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // border: 1px solid;
+    }
+
+    &-current {
+      @include pagination-item;
+      @include pagination-item-active;
+
+      @include var.mq(max, sp) {
+        padding: 4px;
+
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    // [...]の部分
+    &-omitted {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // padding: 8px 16px;
+    }
+
+    &-link {
+      @include pagination-item;
+
+      &.prev {
+        .c-pagination-ico {
+          transform: scaleX(-1);
+        }
+      }
+      &.prev,
+      &.next {
+        border-radius: 4px;
+        background-color: #fff;
+        border: 1px solid var(--bg-gray);
+      }
+    }
+
+    &-prev {
+      margin-right: auto;
+    }
+    &-next {
+      margin-left: auto;
+    }
+  }
+  &-ico {
+    fill: var(--color-category-main);
+
+    height: 16px;
+    width: 16px;
+
+    @include var.mq(max, sp) {
+      height: 12px;
+      width: 12px;
+    }
+  }
+}

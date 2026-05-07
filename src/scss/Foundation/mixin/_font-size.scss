@@ -1,0 +1,14 @@
+@use "sass:math";
+@use "sass:map";
+// @use "breakpoint" as bp;
+
+
+@function fs($minFont, $maxFont) {
+  $minWidth: 600;
+  $maxWidth: 1024;
+  $minFontSize: $minFont * 1px;
+  $fontVw: math.div(round(math.div($minFont, $minWidth) * 100 * 1000), 1000);
+  $maxFontSize: $maxFont * 1px;
+
+  @return clamp(#{$minFontSize}, #{$fontVw}vw, #{$maxFontSize});
+}

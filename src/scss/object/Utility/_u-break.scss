@@ -1,0 +1,34 @@
+@use "../../Foundation/import" as var;
+
+[class^="u-br"] {
+  height: 0;
+  font-size: 0;
+}
+
+// .u-br-pc {
+//   @include var.queryPc {
+//     &::before {
+//       content: "\A";
+//       white-space: pre;
+//     }
+//   }
+// }
+
+.u-br-tb {
+  @include var.mq(min,sp) {
+    &::before {
+      content: "\A";
+      white-space: pre;
+    }
+  }
+}
+
+.u-br-sp {
+  //height: 0;
+  @include var.mq(max,sp){
+    &::before {
+      content: "\A";
+      white-space: pre;
+    }
+  }
+}

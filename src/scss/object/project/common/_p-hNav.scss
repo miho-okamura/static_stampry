@@ -1,0 +1,145 @@
+@use "../../../Foundation/import" as var;
+.p-hNav {
+  list-style: none;
+  //justify-content: space-between;
+  @include var.mq(max,tb) {
+    
+    width: 80%;
+    max-width: 240px;
+    height: 100%;
+    //background-color: #000;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    padding: 16px;
+    padding-top: 64px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 0.4s;
+  }
+
+  &__menu {
+    height: 100%;
+    font-size: 18px;
+    font-weight: bold;
+
+    @include var.mq(max,tb) {
+      flex-direction: column;
+      height: auto;
+      //font-size: 16px;
+    }
+    li {
+      height: 100%;
+      //flex: 1;
+      &:not(:last-child) {
+        @include var.mq(min,sp) {
+          margin-right: 1em;
+        }
+      }
+      @include var.mq(max,tb) {
+        border-bottom: 1px dashed var(--color-yellow);
+        &:first-child {
+          border-top: 1px dashed var(--color-yellow);
+        }
+      }
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-family: var.$ff-Mincho;
+        position: relative;
+        padding-bottom: 4px;
+        //transition: .4s ease-in-out;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: var(--color-yellow);
+          height: 2px;
+          width: 0;
+          transition: 0.2s ease-in-out;
+        }
+        &:hover {
+          //color: var(--color-yellow);
+          &::before {
+            width: 100%;
+          }
+        }
+        @include var.mq(max,tb) {
+          padding: 8px 0;
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__unshown {
+    display: none;
+  }
+
+  &__toggleBtn {
+    position: fixed;
+    right: 16px;
+    z-index: 200;
+    top: 8px;
+    width: 48px;
+    height: 48px;
+
+    span {
+      position: absolute;
+      left: 8px;
+      display: inline-block;
+      box-sizing: border-box;
+      width: 32px;
+      height: 2px;
+      transition: all 0.4s;
+      border-radius: 1px;
+      background-color: #ffffff;
+
+      &:nth-of-type(1) {
+        top: calc(((48px - 18px) / 2) - 6px);
+      }
+
+      &:nth-of-type(2) {
+        top: calc(((100% - 2px) / 2) - 6px);
+      }
+
+      &:nth-of-type(3) {
+        bottom: calc(((48px - 18px) / 2) + 6px);
+      }
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    p {
+      font-family: var.$ff-Mincho;
+      font-size: 10px;
+      line-height: 1;
+      position: absolute;
+      bottom: 0;
+      bottom: 3px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: #ffffff;
+      font-weight: bold;
+    }
+  }
+}
+
+.p-toggleBtn__check {
+  &:checked {
+
+    & ~ .p-header{
+      & .p-hNav {
+        transform: translateX(0%);
+        opacity: 1;
+      }
+    }
+  }
+}

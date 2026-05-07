@@ -1,0 +1,11 @@
+
+@use "../../../Foundation/import" as var;
+.p-body {
+  color: var(--color-base);
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: var.$ff-Base;
+  @include var.mq(max,sp){
+    font-size: 14px;
+  }
+}

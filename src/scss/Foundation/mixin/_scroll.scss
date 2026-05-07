@@ -1,0 +1,49 @@
+@use "breakpoint" as bp;
+
+@mixin scroll-y {
+  &::-webkit-scrollbar {
+    // height: 4px;
+    width: 16px;
+
+    @include bp.mq(max, sp) {
+      width: 8px;
+    }
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    // border: 1px solid;
+    border-radius: 8px;
+    @include bp.mq(max, sp) {
+      border-radius: 4px;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 8px;
+    @include bp.mq(max, sp) {
+      border-radius: 4px;
+    }
+  }
+}
+
+@mixin scroll-x {
+  &::-webkit-scrollbar {
+    //  width: 4px;
+    height: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    // border: 1px solid;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 4px;
+  }
+}
+@mixin scroll-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

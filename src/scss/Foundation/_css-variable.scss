@@ -1,0 +1,28 @@
+
+@use "import" as var;
+
+// 色の設定
+:root {
+  --color-base: #333;
+  --color-blue: #052460;
+  --color-red: #e52136;
+  --color-yellow: #f9de00;
+  --color-bg: #f9d909;
+}
+
+:root {
+  //headerの高さ
+  --headerHeight: 80px;
+  
+  //左右の余白
+  --side-margin: 40px;
+
+  //レイアウトグリッドの余白
+  --layout-margin: 24px;
+
+  @include var.mq(max,sp){
+    --headerHeight: 56px;
+    --side-margin: 16px;
+    --layout-margin: 16px;
+  }
+}

@@ -1,0 +1,12 @@
+@mixin svg-ico($color, $svg_vB, $svg_d) {
+  content: '';
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="#{$svg_vB}"><path fill="%23#{$color}" d="#{$svg_d}" /></svg>');
+  background-size: contain;
+}
+
+
+// @mixin svg-head-ico($color) {
+//   content: "";
+//   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 57"><path d="M46 6a2 2 0 0 0-.81-1.36L39.27.39A2.11 2.11 0 0 0 38.05 0a2.07 2.07 0 0 0-1.7.89l-36 53a2 2 0 0 0 .48 2.69A2.13 2.13 0 0 0 2 57a2 2 0 0 0 1.57-.71L45.52 7.54A2 2 0 0 0 46 6Z" fill="%23#{$color}" /></svg>');
+//   background-size: contain;
+// }

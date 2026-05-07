@@ -1,0 +1,11 @@
+//スマホなど、メニューバーの高さを抜いた高さの取得
+
+$headerHeight: 80px; //headerの高さ
+
+
+$directionAnime: (
+  "top": translateY(-40px),
+  "bottom": translateY(40px),
+  "right": translateX(80px),
+  "left": translateX(-80px),
+);

@@ -1,0 +1,27 @@
+@use "../../../Foundation/import" as var;
+.p-footer {
+  color: #fff;
+  background-color: var(--color-blue);
+  padding: 40px 0 8px;
+  @include var.mq(max,sp){
+    //padding: 40px 0;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    img {
+      max-width: 160px;
+    }
+  }
+  &__copyright {
+    font-size: 12px;
+
+    margin-top: 40px;
+    @include var.mq(max,sp){
+      font-size: 10px;
+    }
+  }
+}

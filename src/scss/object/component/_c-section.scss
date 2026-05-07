@@ -1,0 +1,8 @@
+@use "../../Foundation/import" as var;
+.c-section{
+  padding: 80px 0;
+  //margin-top: 64px;
+  @include var.mq(max,sp){
+    padding: 40px 0;
+  }
+}

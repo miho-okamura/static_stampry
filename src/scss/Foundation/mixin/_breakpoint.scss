@@ -1,0 +1,34 @@
+@use "sass:map";
+$breakpoints: (
+  // PC
+  pc: 1280px,
+  // タブレット
+  tb: 1024px,
+  // スマホ
+  sp: 600px,
+  // スマホ小さめ
+  sp_min: 360px
+) !default;
+
+
+@mixin mq($type, $bp1, $bp2: 0) {
+  @if ($type == min) {
+    $width: map.get($breakpoints, $bp1);
+    $width: $width + 1px;
+    @media screen and (min-width: #{$width}) {
+      @content;
+    }
+  } @else if ($type == max) {
+    @media screen and (max-width: #{map.get($breakpoints, $bp1)}) {
+      @content;
+    }
+  } @else if ($type == bw) {
+    // bw → between
+    $width: map.get($breakpoints, $bp2);
+    $width: $width + 1px;
+    @media screen and (max-width: #{map.get($breakpoints, $bp1)})
+      and (min-width: #{$width}) {
+      @content;
+    }
+  }
+}

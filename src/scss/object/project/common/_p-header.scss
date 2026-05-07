@@ -1,0 +1,21 @@
+
+@use "../../../Foundation/import" as var;
+.p-header{
+  background-color: var(--color-blue);
+  border-bottom: 2px solid #fff;
+  height: 64px;  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 40px;
+  &__logo{
+    //display: none;
+    position: absolute;
+    left: 40px;
+    img{
+      max-height: 48px;
+      height: 100%;
+    }
+  }
+}

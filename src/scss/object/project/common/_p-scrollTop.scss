@@ -1,0 +1,30 @@
+@use "../../../Foundation/import" as var;
+.p-scrollTop {
+
+  pointer-events: none;
+  // display: flex;
+  // justify-content: flex-end;
+
+  &-item {
+    --scrollTopSize: 50px;
+    background-color: #ddd;
+    width: var(--scrollTopSize);
+    height: var(--scrollTopSize);
+    border-radius: 50%;
+    color: #fff;
+    line-height: var(--scrollTopSize);
+    text-align: center;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    opacity: 0;
+    pointer-events: none;
+    transition: var.$anime-transition__fast;
+    &.is-show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use "../../Foundation/import" as var;
+
+// 共通で使うレイアウトを入れる
+
+.u-wrap{
+  max-width: 1200px;
+  margin: auto;
+  @include var.mq(max,sp){
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 0 16px;
+  }
+}

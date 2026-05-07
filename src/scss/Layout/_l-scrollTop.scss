@@ -1,0 +1,10 @@
+
+@use "../Foundation/import" as var;
+
+
+.l-scrollTop{
+  position: fixed;
+  right: 16px;
+  bottom: 24px;
+  z-index: 10;
+}

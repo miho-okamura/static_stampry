@@ -1,0 +1,13 @@
+@use "../../Foundation/import" as var;
+
+.u-jc{
+  &-l{
+    justify-content: flex-start;
+  }
+  &-c{
+    justify-content: center;
+  }
+  &-r{
+    justify-content: flex-end;
+  }
+}

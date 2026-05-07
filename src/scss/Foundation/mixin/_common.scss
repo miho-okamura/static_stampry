@@ -1,0 +1,19 @@
+@use "../variable" as var;
+
+
+@mixin screenHeight {
+  height: 100vh;
+  max-height: calc(var(--vh) * 100);
+}
+
+@mixin screenHeight_inner {
+  height: calc(100vh - #{var.$headerHeight});
+  max-height: calc((var(--vh) * 100) - #{var.$headerHeight});
+}
+
+
+@mixin img-fit($prop){
+  height: 100%;
+  width: 100%;
+  object-fit: $prop;
+}

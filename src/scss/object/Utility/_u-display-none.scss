@@ -1,0 +1,21 @@
+@use "../../Foundation/import" as var;
+
+.u-ds-none{
+  display: none;
+}
+
+.u-pc-on{
+  @include var.mq(max,tb){
+    display: none!important;
+  }
+}
+.u-tb-on{
+  @include var.mq(min,tb){
+    display: none!important;
+  }
+}
+.u-sp-on{
+  @include var.mq(min,sp){
+    display: none!important;
+  }
+}

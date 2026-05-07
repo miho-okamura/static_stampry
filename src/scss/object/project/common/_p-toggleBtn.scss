@@ -1,0 +1,104 @@
+@use "../../../Foundation/import" as var;
+.p-toggleBtn {
+  --toggleBtn-size: 40px;
+  --toggleBtnIco-size: 32px;
+  --toggleBtn-pos: 6px;
+  --toggleBtn-pos-active: 9px;
+  --toggleBtn-rotate: 45deg;
+  @include var.mq(max,sp){
+    --toggleBtn-size: 32px;
+  }
+
+  width: var(--toggleBtn-size);
+  height: var(--toggleBtn-size);
+  pointer-events: auto;
+  position: relative;
+
+  &-ico {
+    position: relative;
+    width: var(--toggleBtnIco-size);
+    height: var(--toggleBtnIco-size);
+    margin: auto;
+    span {
+      position: absolute;
+      display: inline-block;
+      box-sizing: border-box;
+      height: 2px;
+      transition: all 0.4s;
+      border-radius: 1px;
+      background-color: #fff;
+      width: var(--toggleBtnIco-size);
+      left: 50%;
+      transform: translateX(-50%);
+
+      &:nth-of-type(1) {
+        top: var(--toggleBtn-pos);
+      }
+
+      &:nth-of-type(2) {
+        top: calc(((100% - 2px) / 2));
+      }
+
+      &:nth-of-type(3) {
+        bottom: var(--toggleBtn-pos);
+      }
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    font-size: 10px;
+    line-height: 1;
+    bottom: 0;
+    bottom: 3px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  &__check {
+    display: none; //非表示
+
+    &:checked {
+      & ~ .p-header {
+        //background-color: transparent;
+        .p-toggleBtn {
+          span {
+            //background-color: #ffffff;
+            width: calc(var(--toggleBtnIco-size) - 4px);
+
+            $p-toggle-rorate: 45deg;//回転角度
+
+            &:nth-of-type(1) {
+              transform: translateX(-50%) translateY(var( --toggleBtn-pos-active)) rotate($p-toggle-rorate);
+              @include var.mq(max,sp){
+                transform: translateX(-50%) translateY(10px) rotate($p-toggle-rorate);
+              }
+            }
+
+            &:nth-of-type(2) {
+              opacity: 0;
+            }
+
+            &:nth-of-type(3) {
+              transform: translateX(-50%) translateY(calc(var( --toggleBtn-pos-active) * -1)) rotate(-$p-toggle-rorate);
+              @include var.mq(max,sp){
+                transform: translateX(-50%) translateY(-10px) rotate(-$p-toggle-rorate);
+              }
+            }
+          }
+
+          p {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
