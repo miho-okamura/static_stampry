@@ -25,27 +25,37 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir,
       emptyOutDir: true,
+
       rollupOptions: {
         input: {
-          main: resolve(root, "index.html"), // ← index.html だけ！
+          // HTML
+          main: resolve(root, "index.html"),
+
+          // CSS
+          style: resolve(root, "scss/style.scss"),
+          "style-lower": resolve(root, "scss/style-lower.scss"),
         },
+
         output: {
           entryFileNames: `assets/js/[name].js`,
           chunkFileNames: `assets/js/[name].js`,
-          assetFileNames: (assetInfo) => {
-            const ext = assetInfo.name.split(".").pop();
 
+          assetFileNames: (assetInfo) => {
+            const name = assetInfo.name || "";
+            const ext = name.split(".").pop();
+
+            // 画像
             if (["gif", "jpeg", "jpg", "png", "svg", "webp"].includes(ext)) {
-              const pathParts = assetInfo.name.split("/");
+              const pathParts = name.split("/");
               const fileName = pathParts.pop();
-              const folderPath = pathParts.length ? pathParts.join("/") + "/" : "";
+              const folderPath = pathParts.length
+                ? pathParts.join("/") + "/"
+                : "";
+
               return `assets/images/${folderPath}${fileName}`;
             }
 
-            if (assetInfo.name === "main.css") {
-              return "assets/css/style.min.css";
-            }
-
+            // CSS
             if (ext === "css") {
               return "assets/css/[name][extname]";
             }
@@ -81,4 +91,3 @@ export default defineConfig(({ mode }) => {
     ],
   };
 });
-

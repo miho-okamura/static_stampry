@@ -667,6 +667,9 @@
   margin: 0;
   padding-left: 1.4em;
   list-style: disc;
+  display: inline-flex;
+  flex-direction: column;
+  text-align: left;
 }
 .p-contact__item {
   display: list-item;
@@ -684,8 +687,6 @@
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.04em;
-
-
 }
 .p-contact__telLabel {
   margin-right: 8px;
@@ -724,12 +725,7 @@
 .p-contact__button:hover {
   opacity: 0.86;
 }
-@media (min-width: 901px) {
 
-  .u-hidden-pc {
-    display: none;
-  }
-}
 @media (max-width: 900px) {
   .p-intro__inner {
     min-height: auto;
@@ -758,12 +754,13 @@
   }
   .p-mechanism__list {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 8px;
   }
   .p-mechanism__note {
     margin-top: 32px;
     // font-size: 14px;
-    text-align: left;
+    // text-align: left;
+    text-align: center;
   }
   .p-revenue__inner {
     grid-template-columns: 1fr;
@@ -785,18 +782,17 @@
     margin-top: 28px;
     // font-size: 16px;
     line-height: 2;
-    text-align: left;
+    // text-align: left;
   }
   .p-revenue__figure {
-    width: min(78%, 320px);
+    width: min(50%, 160px);
     margin-inline: auto;
   }
   .p-revenue__deco {
-    top: 12px;
+    // top: 12px;
     left: 50%;
-    width: 520px;
-    transform: translate(-32%);
-    opacity: 0.75;
+    width: 640px;
+    transform: translate(-50%);
   }
   .p-businessModel {
     background-position:
@@ -893,20 +889,18 @@
     grid-template-columns: 1fr;
     width: min(100%, 520px);
     margin: 44px auto 0;
-    gap: 22px;
+    gap: 0px;
   }
   .p-townFlow__text {
     margin-top: 34px;
     // font-size: 15px;
-    text-align: left;
+    // text-align: left;
   }
   .p-townFlow__figure {
     width: min(100%, 560px);
     margin-top: 24px;
   }
-  .u-hidden-sp {
-    display: none;
-  }
+
   .p-target__inner {
     padding-top: 72px;
     padding-bottom: 72px;
@@ -1026,6 +1020,7 @@
   }
   .p-contact__text {
     margin-top: 18px;
+    text-align: center;
     // font-size: 16px;
   }
   .p-contact__tel {
@@ -1046,11 +1041,21 @@
   }
 }
 @media (max-width: 520px) {
+  .p-townFlow__figure {
+    margin: 24px -16px 0;
+    width: calc(100% + 32px);
+  }
+
+  .p-target__image {
+    width: min(60%, 184px);
+    margin: auto;
+  }
+
   .p-themeDesign__cards {
-    gap: 14px;
+    gap: 0;
   }
   .p-themeDesign__cardImage {
-    width: calc((100% - 14px) / 2);
+    width: 50%;
   }
   .p-targetCard__label {
     min-width: auto;
@@ -1086,8 +1091,6 @@
     // font-size: 18px;
   }
 }
-
-
 
 .p-intro__title {
   font-size: var(--fs-heading-xl);
@@ -1207,4 +1210,24 @@
 
 .p-contact__button {
   font-size: var(--fs-text-lg);
+}
+
+
+
+.p-cta__button:hover {
+  color: #fff;
+  opacity: 0.86;
+  text-decoration: none;
+}
+
+.p-contact__telLink:hover {
+  color: #ed1c24;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.p-contact__button:hover {
+  color: #fff;
+  opacity: 0.86;
+  text-decoration: none;
 }
