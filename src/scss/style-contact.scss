@@ -1,0 +1,213 @@
+
+.p-contact {
+  overflow: hidden;
+  background-image: url(https://lingate.net/db_img/cl_img/4/free/images/img_20260507105931215.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #eefbff;
+}
+.p-contact__inner {
+  padding-top: 136px;
+  padding-bottom: 116px;
+}
+.p-contact__title {
+  margin: 0;
+  color: var(--color-main);
+  font-weight: 700;
+  // font-size: 42px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+.p-contact__body {
+  margin-top: 18px;
+  text-align: center;
+}
+.p-contact__lead {
+  margin: 0;
+  color: #111;
+  font-weight: 700;
+  // font-size: 28px;
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+}
+.p-contact__text {
+  width: fit-content;
+  margin: 16px auto 0;
+  color: #111;
+  font-weight: 700;
+  // font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+.p-contact__list {
+  margin: 0;
+  padding-left: 1.4em;
+  list-style: disc;
+  display: inline-flex;
+  flex-direction: column;
+  text-align: left;
+}
+.p-contact__item {
+  display: list-item;
+  margin: 0;
+}
+.p-contact__desc {
+  margin: 8px 0 0;
+}
+.p-contact__tel {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin: 42px 0 0;
+  color: #111;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+.p-contact__telLabel {
+  margin-right: 8px;
+  font-size: 26px;
+}
+.p-contact__telLink {
+  color: #ed1c24;
+  font-weight: 800;
+  font-size: 42px;
+  font-family:
+    Inter,
+    Arial,
+    Helvetica Neue,
+    sans-serif;
+  text-decoration: none;
+}
+.p-contact__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 520px);
+  min-height: 100px;
+  margin-top: 36px;
+  padding: 18px 40px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #08223d, #2f86f5);
+  color: #fff;
+  font-weight: 700;
+  // font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.p-contact__button:hover {
+  opacity: 0.86;
+}
+@media (max-width: 900px) {
+
+
+  .p-contact {
+    background-image: url(https://lingate.net/db_img/cl_img/4/free/images/img_20260507105931215.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .p-contact__inner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .p-contact__title {
+    // font-size: 34px;
+  }
+  .p-contact__body {
+    margin-top: 18px;
+  }
+  .p-contact__lead {
+    // font-size: 22px;
+  }
+  .p-contact__text {
+    margin-top: 18px;
+    text-align: center;
+    // font-size: 16px;
+  }
+  .p-contact__tel {
+    flex-wrap: wrap;
+    margin-top: 34px;
+  }
+  .p-contact__telLabel {
+    font-size: 22px;
+  }
+  .p-contact__telLink {
+    font-size: 34px;
+  }
+  .p-contact__button {
+    min-height: 76px;
+    margin-top: 28px;
+    padding: 16px 28px;
+    // font-size: 19px;
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .p-contact__title {
+    // font-size: 30px;
+  }
+  .p-contact__lead {
+    // font-size: 20px;
+  }
+  .p-contact__text {
+    width: 100%;
+    // font-size: 15px;
+  }
+  .p-contact__tel {
+    display: block;
+  }
+  .p-contact__telLabel {
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 20px;
+  }
+  .p-contact__telLink {
+    font-size: 30px;
+  }
+  .p-contact__button {
+    width: 100%;
+    // font-size: 18px;
+  }
+
+}
+
+
+.p-contact__title {
+  font-size: var(--fs-heading-xl);
+}
+
+.p-contact__lead {
+  font-size: var(--fs-text-lg);
+}
+
+.p-contact__text {
+  font-size: var(--fs-text-md);
+}
+
+.p-contact__button {
+  font-size: var(--fs-text-lg);
+}
+
+
+
+
+.p-contact__telLink:hover {
+  color: #ed1c24;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.p-contact__button:hover {
+  color: #fff;
+  opacity: 0.86;
+  text-decoration: none;
+}
