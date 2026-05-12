@@ -35,6 +35,7 @@ export default defineConfig(({ mode }) => {
           style: resolve(root, "scss/style.scss"),
           "style-lower": resolve(root, "scss/style-lower.scss"),
           "style-contact": resolve(root, "scss/style-contact.scss"),
+          "style-new": resolve(root, "scss/style-new.scss"),
         },
 
         output: {

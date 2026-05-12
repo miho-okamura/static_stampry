@@ -52,13 +52,182 @@
   max-width: 1600px;
   height: 100%;
   margin: auto;
-  object-fit: contain;
+  // object-fit: contain;
+  object-fit: cover;
   object-position: right;
   pointer-events: none;
 }
-.p-mechanism {
-  background: #d8f3ff;
+
+.p-intro {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
 }
+
+.p-intro__inner {
+  position: relative;
+  padding-top: 96px;
+  padding-bottom: 110px;
+}
+
+.p-intro__deco {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  max-width: 1100px;
+  height: 100%;
+  margin: auto;
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+}
+
+.p-introMerit {
+  position: relative;
+  z-index: 1;
+}
+
+.p-introMerit__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 26px;
+  width: min(100%, 1040px);
+  margin: 54px auto 0;
+}
+
+.p-introMeritCard {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  gap: 28px;
+  width: calc((100% - 26px) / 2);
+  max-width: 500px;
+  min-height: 230px;
+  padding: 38px 42px;
+  border: 4px solid #1f78cf;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(46, 49, 146, 0.16);
+}
+
+.p-introMeritCard-center {
+  width: min(100%, 500px);
+}
+
+.p-introMeritCard__figure {
+  display: grid;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  margin: 0;
+  border-radius: 50%;
+  background: #eefdff;
+}
+
+.p-introMeritCard__icon {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.p-introMeritCard__body {
+  min-width: 0;
+}
+
+.p-introMeritCard__title {
+  margin: 0;
+  color: var(--color-main);
+  font-size: var(--fs-text-md);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.p-introMeritCard__text {
+  margin: 18px 0 0;
+  color: var(--color-text, #111);
+  font-size: var(--fs-text-sm);
+  font-weight: 700;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 900px) {
+  .p-intro__inner {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .p-intro__deco {
+    top: 24px;
+    width: 900px;
+    max-width: none;
+    opacity: 0.75;
+  }
+
+  .p-introMerit__list {
+    flex-direction: column;
+    gap: 22px;
+    width: min(100%, 560px);
+    margin: 40px auto 0;
+  }
+
+  .p-introMeritCard,
+  .p-introMeritCard-center {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .p-introMeritCard {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    min-height: auto;
+    padding: 30px 24px;
+    border-width: 3px;
+    border-radius: 22px;
+    text-align: center;
+  }
+
+  .p-introMeritCard__figure {
+    width: 130px;
+    height: 130px;
+    margin-inline: auto;
+  }
+
+  .p-introMeritCard__icon {
+    // width: 88px;
+  }
+
+  .p-introMeritCard__text {
+    text-align: left;
+  }
+}
+
+.p-mechanism {
+  // background: #d8f3ff;
+}
+
+.p-mechanism__title {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // gap: 22px;
+  // margin: 0;
+  color: var(--color-main);
+  font-size: var(--fs-heading-md);
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.08em;
+  margin-bottom: 48px;
+}
+
 .p-mechanism__inner {
   padding-top: 110px;
   padding-bottom: 78px;
@@ -505,7 +674,7 @@
   grid-template-columns: 1fr 42px;
   align-items: center;
   width: min(100%, 590px);
-  min-height: 112px;
+  // min-height: 112px;
   margin-top: 28px;
   padding: 18px 38px 18px 74px;
   border-radius: 999px;
@@ -836,9 +1005,10 @@
     text-align: left;
   }
   .p-themeDesign:before {
-    bottom: -220px;
-    width: 980px;
-    height: 720px;
+    top: unset;
+    bottom: 0;
+        width: 220%;
+        height: 80%;
   }
   .p-themeDesign__inner {
     min-height: auto;
@@ -1212,8 +1382,6 @@
   font-size: var(--fs-text-lg);
 }
 
-
-
 .p-cta__button:hover {
   color: #fff;
   opacity: 0.86;
@@ -1230,4 +1398,225 @@
   color: #fff;
   opacity: 0.86;
   text-decoration: none;
+}
+
+.p-recommend {
+  background: #d8f3ff;
+}
+
+.p-recommend__inner {
+  padding-top: 96px;
+  padding-bottom: 100px;
+}
+
+.p-recommend__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin: 0;
+  color: var(--color-main);
+  font-size: var(--fs-heading-md);
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.p-recommend__title::before,
+.p-recommend__title::after {
+  content: "";
+  width: 42px;
+  height: 3px;
+  background: var(--color-main);
+}
+
+.p-recommend__title::before {
+  transform: rotate(55deg);
+}
+
+.p-recommend__title::after {
+  transform: rotate(-55deg);
+}
+
+.p-recommend__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 36px;
+  // width: min(100%, 900px);
+  margin: 58px auto 0;
+}
+
+.p-recommendCard {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  gap: 28px;
+  min-height: 180px;
+  padding: 34px 38px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(46, 49, 146, 0.16);
+}
+
+.p-recommendCard__figure {
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 120px;
+  margin: 0;
+  // border-radius: 50%;
+  // background: #eefdff;
+}
+
+.p-recommendCard__icon {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.p-recommendCard__body {
+  min-width: 0;
+}
+
+.p-recommendCard__title {
+  margin: 0;
+  color: var(--color-main);
+  font-size: var(--fs-text-md);
+  font-weight: 700;
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+}
+
+.p-recommendCard__text {
+  margin: 16px 0 0;
+  color: var(--color-text, #111);
+  font-size: var(--fs-text-sm);
+  font-weight: 700;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+
+.p-recommend__buttonWrap {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.p-recommend__button {
+  display: inline-grid;
+  grid-template-columns: 1fr 34px;
+  align-items: center;
+  width: min(100%, 430px);
+  min-height: 58px;
+  padding: 12px 18px 12px 44px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ff7200 0%, #ffe21f 100%);
+  color: #fff;
+  font-size: var(--fs-text-sm);
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  transition: opacity 0.2s ease;
+}
+
+.p-recommend__button:hover {
+  color: #fff;
+  opacity: 0.86;
+  text-decoration: none;
+}
+
+.p-recommend__buttonIcon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyMCAxNiI+PHBhdGggZmlsbD0iI2U2NWMwMCIgZD0iTTE5LjAxNjIgOC44MjExN2ExLjYxIDEuNjEgMCAwIDAgLjQ3MDktMS4xMzc3M2MwLS40MjY2Ni0uMTY5NC0uODM1ODYtLjQ3MDktMS4xMzc3NEwxMi45NDU0LjQ3MTdBMS42MTAzIDEuNjEwMyAwIDAgMCAxMS44MDY2IDBjLS40MjcxIDAtLjgzNjcuMTY5NjgtMS4xMzg4LjQ3MTdhMS42MTA2IDEuNjEwNiAwIDAgMC0uNDcxNyAxLjEzODgyYzAgLjQyNzEzLjE2OTcuODM2NzcuNDcxNyAxLjEzODhsMy4zMjMxIDMuMzI0MTJIMS42MDk5N2ExLjYxMDAxIDEuNjEwMDEgMCAxIDAgMCAzLjIySDEzLjk5MDlsLTMuMzIzMSAzLjMyMzA2YTEuNjEgMS42MSAwIDAgMC0uMzQ5MS41MjI1IDEuNjExIDEuNjExIDAgMCAwLS4xMjI2LjYxNjNjMCAuMjExNS4wNDE3LjQyMDkuMTIyNi42MTYzcy4xOTk2LjM3MjkuMzQ5MS41MjI1Yy4xNDk2LjE0OTUuMzI3MS4yNjgyLjUyMjUuMzQ5MXMuNDA0OC4xMjI2LjYxNjMuMTIyNmExLjYxMDcgMS42MTA3IDAgMCAwIDEuMTM4OC0uNDcxN3oiLz48L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 14px;
+}
+
+@media (max-width: 900px) {
+  .p-recommend__inner {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .p-recommend__title {
+    gap: 16px;
+  }
+
+  .p-recommend__title::before,
+  .p-recommend__title::after {
+    width: 32px;
+  }
+
+  .p-recommend__list {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    width: min(100%, 560px);
+    margin-top: 44px;
+  }
+
+  .p-recommendCard {
+    grid-template-columns: 80px 1fr;
+    gap: 22px;
+    min-height: auto;
+    padding: 28px 24px;
+  }
+
+  .p-recommendCard__figure {
+    width: 80px;
+    height: 80px;
+  }
+
+  .p-recommendCard__icon {
+    // width: 66px;
+  }
+
+  .p-recommend__buttonWrap {
+    margin-top: 44px;
+  }
+}
+
+@media (max-width: 520px) {
+  .p-recommend__title {
+    display: block;
+  }
+
+  .p-recommend__title::before,
+  .p-recommend__title::after {
+    display: none;
+  }
+
+  .p-recommendCard {
+    // grid-template-columns: 1fr;
+
+    // grid-template-columns: 64px 1fr;
+    gap: 8px;
+    text-align: center;
+
+    padding: 16px;
+  }
+
+  .p-recommendCard__figure {
+    // width: 64px;
+    // height: 64px;
+    margin-inline: auto;
+  }
+
+  .p-recommendCard__text {
+    text-align: left;
+  }
+
+  .p-recommend__button {
+    grid-template-columns: 1fr 30px;
+    width: 100%;
+    min-height: 56px;
+    padding: 12px 14px 12px 28px;
+    letter-spacing: 0.04em;
+  }
 }
