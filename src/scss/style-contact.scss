@@ -1,15 +1,30 @@
+.article-title__header{
+  display: none;
+}
+
+.shop__caontainer--1col .detail-container .contact__box{
+  width: min(100% - 32px, 1100px);
+  margin-inline: auto;
+}
+
+.shop__caontainer--1col {
+background-image:url(https://lingate.net/db_img/cl_img/4/free/images/img_20260507105931215.jpg);background-position:center;background-size:cover;background-repeat:no-repeat;background-color:#eefbff;background-attachment: fixed;
+}
+
+
+
 
 .p-contact {
   overflow: hidden;
-  background-image: url(https://lingate.net/db_img/cl_img/4/free/images/img_20260507105931215.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #eefbff;
+  // background-image: url(https://lingate.net/db_img/cl_img/4/free/images/img_20260507105931215.jpg);
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-color: #eefbff;
 }
 .p-contact__inner {
-  padding-top: 136px;
-  padding-bottom: 116px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 .p-contact__title {
   margin: 0;

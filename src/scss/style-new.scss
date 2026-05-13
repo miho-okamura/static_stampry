@@ -124,6 +124,7 @@
 
   .p-partnerHero__body {
     text-align: center;
+    order: 2;
   }
 
   .p-partnerHero__title {
@@ -143,6 +144,7 @@
   .p-partnerHero__figure {
     width: min(100%, 520px);
     margin-inline: auto;
+    order: 1;
   }
 }
 
@@ -153,6 +155,8 @@
 
   .p-partnerHero__buttons {
     width: 100%;
+
+    display: none;
   }
 
   .p-partnerHero__button {
@@ -855,7 +859,7 @@
   line-height: 1.2;
   letter-spacing: 0.04em;
 
-      font-weight: 900;
+  font-weight: 900;
 }
 
 .p-planOverviewCard__price span {
@@ -929,13 +933,13 @@
 }
 
 .p-planOverview__note {
-    margin: 42px 0 0;
-    color: #ed1c24;
-    font-weight: 700;
-    font-size: var(--fs-text-sm);
-    line-height: 1.9;
-    letter-spacing: .04em;
-    text-align: center;
+  margin: 42px 0 0;
+  color: #ed1c24;
+  font-weight: 700;
+  font-size: var(--fs-text-sm);
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
