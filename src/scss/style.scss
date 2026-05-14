@@ -231,7 +231,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 26px;
-  width: min(100%, 1040px);
+  // width: min(100%, 1040px);
   margin: 54px auto 0;
 }
 
@@ -241,7 +241,7 @@
   align-items: center;
   gap: 28px;
   width: calc((100% - 26px) / 2);
-  max-width: 500px;
+  // max-width: 500px;
   min-height: 230px;
   padding: 38px 42px;
   border: 4px solid #1f78cf;
@@ -251,7 +251,7 @@
 }
 
 .p-introMeritCard-center {
-  width: min(100%, 500px);
+  // width: min(100%, 500px);
 }
 
 .p-introMeritCard__figure {
@@ -278,7 +278,7 @@
 .p-introMeritCard__title {
   margin: 0;
   color: var(--color-main);
-  font-size: var(--fs-text-md);
+  font-size: var(--fs-text-lg);
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.04em;
