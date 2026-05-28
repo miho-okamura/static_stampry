@@ -37,6 +37,7 @@ export default defineConfig(({ mode }) => {
           "style-contact": resolve(root, "scss/style-contact.scss"),
           "style-new": resolve(root, "scss/style-new.scss"),
           "style-company": resolve(root, "scss/style-company.scss"),
+          "style-s-business": resolve(root, "scss/style-s-business.scss"),
 
           
           // SHOP
