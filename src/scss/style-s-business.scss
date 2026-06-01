@@ -340,7 +340,9 @@
     gap: 24px;
     margin-top: 40px;
 
-    width: min(100%, 320px);
+    // width: min(100%, 320px);
+
+    width: 100%;
   }
 
   .p-feature__card {
@@ -595,7 +597,8 @@
     gap: 16px;
     margin-top: 40px;
 
-    width: min(100%, 320px);
+    // width: min(100%, 320px);
+    width: 100%;
   }
 
   .p-target__card {
@@ -862,19 +865,19 @@
   }
   .p-scene__list {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap:24px;
     margin-top: 40px;
   }
   .p-scene__figure {
-    width: min(100%, 224px);
+    width: min(100%, 184px);
   }
   .p-scene__title {
-    margin-top: 16px;
-    font-size: 1.8rem;
+    margin-top: 8px;
+    font-size: 2rem;
   }
   .p-scene__text {
     margin-top: 8px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 300px) {
@@ -1125,29 +1128,45 @@
   .p-support {
     padding: 64px 0 72px;
   }
+
   .p-support__inner {
     width: min(100% - 32px, 560px);
     margin-inline: auto;
   }
+
   .p-support__heading {
     font-size: 2.4rem;
   }
+
   .p-support__list {
     grid-template-columns: 1fr;
-    gap: 40px;
-    margin-top: 48px;
+    gap: 24px;
+    margin-top: 40px;
   }
+
+  .p-support__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+  }
+
   .p-support__icon {
-    width: 144px;
-    height: 144px;
+    flex: 0 0 auto;
+    width: 96px;
+    height: 96px;
+    margin-inline: 0;
   }
+
   .p-support__icon svg {
-    width: 72px;
-    height: 72px;
+    width: 48px;
+    height: 48px;
   }
+
   .p-support__text {
-    margin-top: 20px;
-    font-size: 1.7rem;
+    margin-top: 0;
+    font-size: 1.6rem;
+    line-height: 1.7;
   }
 }
 @media screen and (max-width: 300px) {
@@ -1155,10 +1174,65 @@
     width: min(100% - 24px, 560px);
     margin-inline: auto;
   }
+
   .p-support__heading {
     font-size: 2rem;
   }
+
+  .p-support__item {
+    gap: 12px;
+  }
+
+  .p-support__icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .p-support__icon svg {
+    width: 40px;
+    height: 40px;
+  }
+
   .p-support__text {
+    font-size: 1.4rem;
+  }
+}
+
+
+/* ---------------------------------------------
+  SP font balance
+--------------------------------------------- */
+@media screen and (max-width: 600px) {
+  .p-feature__heading,
+  .p-target__heading,
+  .p-install__heading,
+  .p-scene__heading,
+  .p-support__heading {
+    font-size: 2.6rem;
+    line-height: 1.45;
+  }
+
+  .p-feature__title,
+  .p-target__title,
+  .p-scene__title {
+    font-size: 1.9rem;
+    line-height: 1.5;
+  }
+
+  .p-feature__text,
+  .p-target__text,
+  .p-scene__text,
+  .p-support__text {
+    font-size: 1.6rem;
+    line-height: 1.75;
+  }
+
+  .p-feature__point,
+  .p-target__button {
+    font-size: 1.6rem;
+  }
+
+  .p-hero__button {
     font-size: 1.5rem;
   }
 }
