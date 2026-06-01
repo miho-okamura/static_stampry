@@ -9,6 +9,22 @@
 
 .p-hero__media {
   position: relative;
+
+  @media screen and (min-width: 1025px) and (max-width: 1600px) {
+    // 1025px〜1600pxの間だけ適用
+    position: relative;
+    left: 50%;
+    width: 1600px;
+    transform: translate(-50%);
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    // 601px〜1024pxの間だけ適用
+    position: relative;
+    left: 50%;
+    width: 1200px;
+    transform: translate(-50%);
+  }
 }
 
 .p-hero__image {
@@ -83,9 +99,9 @@
 
 @media screen and (max-width: 1280px) {
   .p-hero__buttons {
-    bottom: 72px;
-    gap: 12px;
-    width: min(100% - 48px, 900px);
+    // bottom: 72px;
+    // gap: 12px;
+    width: min(100% - 48px, 1000px);
   }
   .p-hero__button {
     min-height: 68px;
@@ -865,7 +881,7 @@
   }
   .p-scene__list {
     grid-template-columns: 1fr;
-    gap:24px;
+    gap: 24px;
     margin-top: 40px;
   }
   .p-scene__figure {
@@ -1197,7 +1213,6 @@
     font-size: 1.4rem;
   }
 }
-
 
 /* ---------------------------------------------
   SP font balance
