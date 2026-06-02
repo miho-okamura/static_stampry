@@ -948,11 +948,9 @@ body.is-header-fixed {
 /* Price */
 .p-price__cards {
   display: grid;
-  grid-template-columns: 360px 1fr;
-  align-items: stretch;
-  gap: 32px;
-  max-width: 1120px;
-  margin-inline: auto;
+  grid-template-columns: repeat(2, minmax(0, 522px));
+  gap: 24px;
+  justify-content: center;
 }
 
 .p-price__card img {

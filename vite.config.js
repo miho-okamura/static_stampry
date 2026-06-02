@@ -43,6 +43,7 @@ export default defineConfig(({ mode }) => {
           // SHOP
           
           "style-shop": resolve(root, "scss/style-shop.scss"),
+          "style-group": resolve(root, "scss/style-group.scss"),
         },
 
         output: {
