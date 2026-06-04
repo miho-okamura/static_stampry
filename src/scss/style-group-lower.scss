@@ -130,7 +130,7 @@ body {
 
 .p-recommend__heading img {
   display: block;
-  width: min(100%, 560px);
+  width: min(100%, 551px);
   height: auto;
   margin-inline: auto;
 }
@@ -269,7 +269,7 @@ body {
 
 .p-step__heading img {
   display: block;
-  width: min(100%, 1010px);
+  width: min(100%, 984px);
   height: auto;
   margin-inline: auto;
 }
@@ -354,7 +354,7 @@ body {
   margin: 12px 0 0;
   color: var(--color-text);
   font-size: clamp(16px, 1.2vw, 20px);
-  font-weight: 700;
+  // font-weight: 700;
   line-height: 1.7;
 }
 
@@ -449,7 +449,7 @@ body {
 
 .p-example__heading img {
   display: block;
-  width: min(100%, 640px);
+  width: min(100%, 505px);
   height: auto;
   margin-inline: auto;
 }
@@ -534,7 +534,7 @@ body {
   margin: 12px 0 0;
   color: var(--color-text);
   font-size: clamp(16px, 1.2vw, 20px);
-  font-weight: 700;
+  // font-weight: 700;
   line-height: 1.7;
 }
 
@@ -688,7 +688,7 @@ body {
   padding: 24px 40px;
   color: var(--color-text);
   font-size: var(--fs-text-lg);
-  font-weight: 700;
+  // font-weight: 700;
   line-height: 1.8;
 }
 .p-price__included {
@@ -727,7 +727,7 @@ body {
   padding-left: 32px;
   color: var(--color-text);
   font-size: clamp(14px, 1vw, 16px);
-  font-weight: 700;
+  // font-weight: 700;
   line-height: 1.6;
 }
 

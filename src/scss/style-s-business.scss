@@ -17,7 +17,7 @@
     width: 1600px;
     transform: translate(-50%);
   }
-  
+
   @media screen and (min-width: 601px) and (max-width: 1024px) {
     // 601px〜1024pxの間だけ適用
     position: relative;
@@ -72,11 +72,18 @@
 .p-hero__button-primary {
   background-color: #2f33a7;
   color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 .p-hero__button-secondary {
   background-color: #fff;
   color: #2f33a7;
+  &:hover {
+    color: #2f33a7;
+  }
 }
 
 .p-hero__buttonIcon {

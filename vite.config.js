@@ -37,7 +37,7 @@ export default defineConfig(({ mode }) => {
           "style-contact": resolve(root, "scss/style-contact.scss"),
           "style-new": resolve(root, "scss/style-new.scss"),
           "style-company": resolve(root, "scss/style-company.scss"),
-          "style-s-business": resolve(root, "scss/style-s-business.scss"),
+
 
           
           // SHOP
@@ -45,7 +45,17 @@ export default defineConfig(({ mode }) => {
           "style-shop": resolve(root, "scss/style-shop.scss"),
           "style-group": resolve(root, "scss/style-group.scss"),
           
+
+
+
+
+          // https://lingate.net/lp/stampry-shop/?preview
+          "style-s-business": resolve(root, "scss/style-s-business.scss"),
+
+          // https://lingate.net/lp/stampry-shop/freepage-2.html?preview
           "style-group-lower": resolve(root, "scss/style-group-lower.scss"),
+
+          // https://lingate.net/lp/stampry-shop/freepage-3.html?preview
           "style-group-kanko": resolve(root, "scss/style-group-kanko.scss"),
 
         },
