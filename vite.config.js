@@ -44,6 +44,10 @@ export default defineConfig(({ mode }) => {
           
           "style-shop": resolve(root, "scss/style-shop.scss"),
           "style-group": resolve(root, "scss/style-group.scss"),
+          
+          "style-group-lower": resolve(root, "scss/style-group-lower.scss"),
+          "style-group-kanko": resolve(root, "scss/style-group-kanko.scss"),
+
         },
 
         output: {
