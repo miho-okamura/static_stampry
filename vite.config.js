@@ -58,6 +58,9 @@ export default defineConfig(({ mode }) => {
           // https://lingate.net/lp/stampry-shop/freepage-3.html?preview
           "style-group-kanko": resolve(root, "scss/style-group-kanko.scss"),
 
+          // https://lingate.net/lp/stampry-shop/freepage-3.html?preview
+          "style-group-shokibo": resolve(root, "scss/style-group-shokibo.scss"),
+
         },
 
         output: {
